@@ -1,0 +1,26 @@
+server:
+  port: 13090
+eureka:
+  client:
+    serviceUrl: #注册中心的注册地址
+      defaultZone: http://127.0.0.1:13080/eureka/
+spring:
+  application:
+    name: data-extract
+
+# 数据源配置
+#sql server
+druid:
+  driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jdbc_url: jdbc:sqlserver://192.168.85.112:1433;databasename=PMData20191127
+  db_username: sa
+  db_password: Abc123
+  initialSize: 5
+  maxActive: 10
+  maxIdle: 5
+  minIdle: 1
+  maxWait: 60000
+  timeBetweenEvictionRunsMillis: 3000
+  minEvictableIdleTimeMillis: 300000
+  maxPoolPreparedStatementPerConnectionSize: 20
+  interTrigger: false

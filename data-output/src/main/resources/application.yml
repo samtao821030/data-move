@@ -1,0 +1,23 @@
+server:
+  port: 13091
+eureka:
+  client:
+    serviceUrl: #注册中心的注册地址
+      defaultZone: http://127.0.0.1:13080/eureka/
+spring:
+  application:
+    name: data-output
+  datasource:
+    url: jdbc:oracle:thin:@192.168.85.89:1521:SAFE
+    username: scott
+    password: 12345
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    jpa:
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          #        hbm2ddl:
+          #          auto: update
+          dialect: org.hibernate.dialect.Oracle10gDialect
+      show-sql: true
