@@ -38,10 +38,10 @@
 
         <dependency>
             <groupId>com.oracle</groupId>
-            <artifactId>ojdbc7</artifactId>
-            <version>12.1.0</version>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.3</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/oracle/ojdbc7.jar</systemPath>
+            <systemPath>${project.basedir}/src/main/resources/oracle/ojdbc6-11.2.0.3.jar</systemPath>
         </dependency>
 
         <dependency>

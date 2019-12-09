@@ -4,6 +4,7 @@ import com.jsti.data.extract.entity.newpm.NewProject;
 import com.jsti.data.extract.entity.oldpm.OldProject;
 import com.jsti.data.extract.entity.tran.TranEntity;
 import com.jsti.data.extract.transform.ITransForm;
+import com.jsti.data.extract.util.IDUtil;
 import org.springframework.beans.BeanUtils;
 
 import java.math.BigDecimal;
@@ -20,10 +21,16 @@ public class ProjectTransForm implements ITransForm {
                 OldProject oldProject = (OldProject) o;
                 //新项目编号(L1)
                 String code_l1=oldProject.getContract_projectcode();
+                //新项目id(L1)
+                BigDecimal id_l1 = IDUtil.generateProjectId(code_l1);
                 //新项目编号(L1-D01)
                 String code_l1_d01=code_l1+"-D01";
+                //新项目id(L1-D01)
+                BigDecimal id_l1_d01 = IDUtil.generateProjectId(code_l1_d01);
                 //新项目编号(L1-D01-001)
                 String code_l1_d01_001=code_l1_d01+"-001";
+                //新项目id(L1-D01-001)
+                BigDecimal id_l1_d01_001 = IDUtil.generateProjectId(code_l1_d01_001);
                 //新项目编号(L1-S01)
                 String code_l1_s01=code_l1+"-S01";
                 //新项目编号(L1-S01-001)
@@ -37,6 +44,9 @@ public class ProjectTransForm implements ITransForm {
                 newProject_l1.setCode(code_l1);
                 newProject_l1.setName(name);
                 newProject_l1.setAmount(amount);
+                //设置迁移顶级编号
+                newProject_l1.setTran_code(code_l1);
+                newProject_l1.setId(id_l1);
 
                 newProjectList.add(newProject_l1);
                 //L1-------------------end
@@ -46,6 +56,8 @@ public class ProjectTransForm implements ITransForm {
                 //复制对象
                 BeanUtils.copyProperties(newProject_l1,newProject_l1_d01);
                 newProject_l1_d01.setCode(code_l1_d01);
+                //设置Id
+                newProject_l1_d01.setId(id_l1_d01);
 
                 newProjectList.add(newProject_l1_d01);
                 //L1-D01-------------------end
@@ -55,6 +67,8 @@ public class ProjectTransForm implements ITransForm {
                 //复制对象
                 BeanUtils.copyProperties(newProject_l1,newProject_l1_d01_001);
                 newProject_l1_d01_001.setCode(code_l1_d01_001);
+                //设置Id
+                newProject_l1_d01_001.setId(id_l1_d01_001);
 
                 newProjectList.add(newProject_l1_d01_001);
                 //L1-D01-001-------------------end

@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name="PROJECT")
+@Table(name="TRAN_PROJECT",schema = "PROJECT")
 public class Project {
 
     @Id
@@ -45,13 +45,13 @@ public class Project {
     private Long amount;
 
     @Column(name="AMOUNT_FUNCTIONAL")
-    private Long amountFunctional;
+    private Long amount_functional;
 
     @Column(name="PROVISION")
     private Long provision;
 
     @Column(name="PROVISION_FUNCTIONAL")
-    private Long provisionFunctional;
+    private Long provision_functional;
 
     @Column(name="DESCRIPTION")
     private String description;
@@ -63,103 +63,103 @@ public class Project {
     private String city;
 
     @Column(name="CONTRACT_ORG")
-    private String contractOrg;
+    private String contract_org;
 
     @Column(name="CONTRACT_ORG_CODE")
-    private String contractOrgCode;
+    private String contract_or_code;
 
     @Column(name="EXECUTE_ORG")
-    private String executeOrg;
+    private String execute_org;
 
     @Column(name="EXECUTE_ORG_CODE")
-    private String executeOrgCode;
+    private String execute_org_code;
 
     @Column(name="EXECUTE_DEPARTMENT")
-    private Long executeDepartment;
+    private Long execute_department;
 
     @Column(name="CUSTOM_ATTR")
-    private String customAttr;
+    private String custom_attr;
 
     @Column(name="CHIEFLAG")
-    private String chiefLag;
+    private String chieflag;
 
     @Column(name="STATUS")
     private String status;
 
     @Column(name="SYS_STATUS")
-    private String sysStatus;
+    private String sys_status;
 
     @Column(name="PROF_FLOW")
-    private Long profFlow;
+    private Long prof_flow;
 
     @Column(name="CREATE_BY")
-    private String createBy;
+    private String create_by;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @Column(name="CREATE_TIME")
-    private Date createTime;
+    private Date create_time;
 
     @Column(name="UPDATE_BY")
-    private String updateBy;
+    private String update_by;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @Column(name="UPDATE_TIME")
-    private Date updateTime;
+    private Date update_time;
 
     @Column(name="DEL_FLAG")
-    private String delFlag;
+    private String del_flag;
 
     @Column(name="KEYFLAG")
-    private String keyFlag;
+    private String keyflag;
 
     @Column(name="MANAGER_NAME")
-    private String managerName;
+    private String manager_name;
 
     @Column(name="DIRECTOR_NAME")
-    private String directorName;
+    private String director_name;
 
     @Column(name="CHECK_AMOUNT")
-    private Long checkAmount;
+    private Long check_amount;
 
     @Column(name="CHECK_FUNCTIONAL")
-    private Long checkFunctional;
+    private Long check_functional;
 
     @Column(name="VIRTUALFLAG")
-    private String virtualFlag;
+    private String virtualflag;
 
     @Column(name="BRANDFLAG")
-    private String brandFlag;
+    private String brandflag;
 
     @Column(name="BTT")
     private String btt;
 
     @Column(name="START_NUM")
-    private Long startNum;
+    private Long start_num;
 
     @Column(name="CUSTOMER_CODE")
-    private String customerCode;
+    private String customer_code;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @Column(name="CLOSE_TIME")
-    private Date closeTime;
+    private Date close_time;
 
     @Column(name="STATUS_NAME")
-    private String statusName;
+    private String status_name;
 
     @Column(name="CUSTOMER_ID")
-    private Long customerId;
+    private Long customer_id;
 
     @Column(name="SERVICE_ORDER_FLAG")
-    private String serviceOrderFlag;
+    private String service_orde_flag;
 
     @Column(name="QUOTA_FIXED_FLAG")
-    private String quotaFixedFlag;
+    private String quota_fixed_flag;
 
     @Column(name="TRAN_CODE")
-    private String tranCode;
+    private String tran_code;
 
     public Long getId() {
         return id;
@@ -241,12 +241,12 @@ public class Project {
         this.amount = amount;
     }
 
-    public Long getAmountFunctional() {
-        return amountFunctional;
+    public Long getAmount_functional() {
+        return amount_functional;
     }
 
-    public void setAmountFunctional(Long amountFunctional) {
-        this.amountFunctional = amountFunctional;
+    public void setAmount_functional(Long amount_functional) {
+        this.amount_functional = amount_functional;
     }
 
     public Long getProvision() {
@@ -257,12 +257,12 @@ public class Project {
         this.provision = provision;
     }
 
-    public Long getProvisionFunctional() {
-        return provisionFunctional;
+    public Long getProvision_functional() {
+        return provision_functional;
     }
 
-    public void setProvisionFunctional(Long provisionFunctional) {
-        this.provisionFunctional = provisionFunctional;
+    public void setProvision_functional(Long provision_functional) {
+        this.provision_functional = provision_functional;
     }
 
     public String getDescription() {
@@ -289,60 +289,60 @@ public class Project {
         this.city = city;
     }
 
-    public String getContractOrg() {
-        return contractOrg;
+    public String getContract_org() {
+        return contract_org;
     }
 
-    public void setContractOrg(String contractOrg) {
-        this.contractOrg = contractOrg;
+    public void setContract_org(String contract_org) {
+        this.contract_org = contract_org;
     }
 
-    public String getContractOrgCode() {
-        return contractOrgCode;
+    public String getContract_or_code() {
+        return contract_or_code;
     }
 
-    public void setContractOrgCode(String contractOrgCode) {
-        this.contractOrgCode = contractOrgCode;
+    public void setContract_or_code(String contract_or_code) {
+        this.contract_or_code = contract_or_code;
     }
 
-    public String getExecuteOrg() {
-        return executeOrg;
+    public String getExecute_org() {
+        return execute_org;
     }
 
-    public void setExecuteOrg(String executeOrg) {
-        this.executeOrg = executeOrg;
+    public void setExecute_org(String execute_org) {
+        this.execute_org = execute_org;
     }
 
-    public String getExecuteOrgCode() {
-        return executeOrgCode;
+    public String getExecute_org_code() {
+        return execute_org_code;
     }
 
-    public void setExecuteOrgCode(String executeOrgCode) {
-        this.executeOrgCode = executeOrgCode;
+    public void setExecute_org_code(String execute_org_code) {
+        this.execute_org_code = execute_org_code;
     }
 
-    public Long getExecuteDepartment() {
-        return executeDepartment;
+    public Long getExecute_department() {
+        return execute_department;
     }
 
-    public void setExecuteDepartment(Long executeDepartment) {
-        this.executeDepartment = executeDepartment;
+    public void setExecute_department(Long execute_department) {
+        this.execute_department = execute_department;
     }
 
-    public String getCustomAttr() {
-        return customAttr;
+    public String getCustom_attr() {
+        return custom_attr;
     }
 
-    public void setCustomAttr(String customAttr) {
-        this.customAttr = customAttr;
+    public void setCustom_attr(String custom_attr) {
+        this.custom_attr = custom_attr;
     }
 
-    public String getChiefLag() {
-        return chiefLag;
+    public String getChieflag() {
+        return chieflag;
     }
 
-    public void setChiefLag(String chiefLag) {
-        this.chiefLag = chiefLag;
+    public void setChieflag(String chieflag) {
+        this.chieflag = chieflag;
     }
 
     public String getStatus() {
@@ -353,116 +353,116 @@ public class Project {
         this.status = status;
     }
 
-    public String getSysStatus() {
-        return sysStatus;
+    public String getSys_status() {
+        return sys_status;
     }
 
-    public void setSysStatus(String sysStatus) {
-        this.sysStatus = sysStatus;
+    public void setSys_status(String sys_status) {
+        this.sys_status = sys_status;
     }
 
-    public Long getProfFlow() {
-        return profFlow;
+    public Long getProf_flow() {
+        return prof_flow;
     }
 
-    public void setProfFlow(Long profFlow) {
-        this.profFlow = profFlow;
+    public void setProf_flow(Long prof_flow) {
+        this.prof_flow = prof_flow;
     }
 
-    public String getCreateBy() {
-        return createBy;
+    public String getCreate_by() {
+        return create_by;
     }
 
-    public void setCreateBy(String createBy) {
-        this.createBy = createBy;
+    public void setCreate_by(String create_by) {
+        this.create_by = create_by;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreate_time() {
+        return create_time;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreate_time(Date create_time) {
+        this.create_time = create_time;
     }
 
-    public String getUpdateBy() {
-        return updateBy;
+    public String getUpdate_by() {
+        return update_by;
     }
 
-    public void setUpdateBy(String updateBy) {
-        this.updateBy = updateBy;
+    public void setUpdate_by(String update_by) {
+        this.update_by = update_by;
     }
 
-    public Date getUpdateTime() {
-        return updateTime;
+    public Date getUpdate_time() {
+        return update_time;
     }
 
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+    public void setUpdate_time(Date update_time) {
+        this.update_time = update_time;
     }
 
-    public String getDelFlag() {
-        return delFlag;
+    public String getDel_flag() {
+        return del_flag;
     }
 
-    public void setDelFlag(String delFlag) {
-        this.delFlag = delFlag;
+    public void setDel_flag(String del_flag) {
+        this.del_flag = del_flag;
     }
 
-    public String getKeyFlag() {
-        return keyFlag;
+    public String getKeyflag() {
+        return keyflag;
     }
 
-    public void setKeyFlag(String keyFlag) {
-        this.keyFlag = keyFlag;
+    public void setKeyflag(String keyflag) {
+        this.keyflag = keyflag;
     }
 
-    public String getManagerName() {
-        return managerName;
+    public String getManager_name() {
+        return manager_name;
     }
 
-    public void setManagerName(String managerName) {
-        this.managerName = managerName;
+    public void setManager_name(String manager_name) {
+        this.manager_name = manager_name;
     }
 
-    public String getDirectorName() {
-        return directorName;
+    public String getDirector_name() {
+        return director_name;
     }
 
-    public void setDirectorName(String directorName) {
-        this.directorName = directorName;
+    public void setDirector_name(String director_name) {
+        this.director_name = director_name;
     }
 
-    public Long getCheckAmount() {
-        return checkAmount;
+    public Long getCheck_amount() {
+        return check_amount;
     }
 
-    public void setCheckAmount(Long checkAmount) {
-        this.checkAmount = checkAmount;
+    public void setCheck_amount(Long check_amount) {
+        this.check_amount = check_amount;
     }
 
-    public Long getCheckFunctional() {
-        return checkFunctional;
+    public Long getCheck_functional() {
+        return check_functional;
     }
 
-    public void setCheckFunctional(Long checkFunctional) {
-        this.checkFunctional = checkFunctional;
+    public void setCheck_functional(Long check_functional) {
+        this.check_functional = check_functional;
     }
 
-    public String getVirtualFlag() {
-        return virtualFlag;
+    public String getVirtualflag() {
+        return virtualflag;
     }
 
-    public void setVirtualFlag(String virtualFlag) {
-        this.virtualFlag = virtualFlag;
+    public void setVirtualflag(String virtualflag) {
+        this.virtualflag = virtualflag;
     }
 
-    public String getBrandFlag() {
-        return brandFlag;
+    public String getBrandflag() {
+        return brandflag;
     }
 
-    public void setBrandFlag(String brandFlag) {
-        this.brandFlag = brandFlag;
+    public void setBrandflag(String brandflag) {
+        this.brandflag = brandflag;
     }
 
     public String getBtt() {
@@ -473,67 +473,67 @@ public class Project {
         this.btt = btt;
     }
 
-    public Long getStartNum() {
-        return startNum;
+    public Long getStart_num() {
+        return start_num;
     }
 
-    public void setStartNum(Long startNum) {
-        this.startNum = startNum;
+    public void setStart_num(Long start_num) {
+        this.start_num = start_num;
     }
 
-    public String getCustomerCode() {
-        return customerCode;
+    public String getCustomer_code() {
+        return customer_code;
     }
 
-    public void setCustomerCode(String customerCode) {
-        this.customerCode = customerCode;
+    public void setCustomer_code(String customer_code) {
+        this.customer_code = customer_code;
     }
 
-    public Date getCloseTime() {
-        return closeTime;
+    public Date getClose_time() {
+        return close_time;
     }
 
-    public void setCloseTime(Date closeTime) {
-        this.closeTime = closeTime;
+    public void setClose_time(Date close_time) {
+        this.close_time = close_time;
     }
 
-    public String getStatusName() {
-        return statusName;
+    public String getStatus_name() {
+        return status_name;
     }
 
-    public void setStatusName(String statusName) {
-        this.statusName = statusName;
+    public void setStatus_name(String status_name) {
+        this.status_name = status_name;
     }
 
-    public Long getCustomerId() {
-        return customerId;
+    public Long getCustomer_id() {
+        return customer_id;
     }
 
-    public void setCustomerId(Long customerId) {
-        this.customerId = customerId;
+    public void setCustomer_id(Long customer_id) {
+        this.customer_id = customer_id;
     }
 
-    public String getServiceOrderFlag() {
-        return serviceOrderFlag;
+    public String getService_orde_flag() {
+        return service_orde_flag;
     }
 
-    public void setServiceOrderFlag(String serviceOrderFlag) {
-        this.serviceOrderFlag = serviceOrderFlag;
+    public void setService_orde_flag(String service_orde_flag) {
+        this.service_orde_flag = service_orde_flag;
     }
 
-    public String getQuotaFixedFlag() {
-        return quotaFixedFlag;
+    public String getQuota_fixed_flag() {
+        return quota_fixed_flag;
     }
 
-    public void setQuotaFixedFlag(String quotaFixedFlag) {
-        this.quotaFixedFlag = quotaFixedFlag;
+    public void setQuota_fixed_flag(String quota_fixed_flag) {
+        this.quota_fixed_flag = quota_fixed_flag;
     }
 
-    public String getTranCode() {
-        return tranCode;
+    public String getTran_code() {
+        return tran_code;
     }
 
-    public void setTranCode(String tranCode) {
-        this.tranCode = tranCode;
+    public void setTran_code(String tran_code) {
+        this.tran_code = tran_code;
     }
 }

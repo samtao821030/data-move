@@ -36,6 +36,8 @@ public class ProjectService implements IProjectService {
         tranEntity.setBatchNo(batchNo);
         //设置批次时间戳
         tranEntity.setBatchTime(batchTime);
+        //设置目标表
+        tranEntity.setTableName("project");
         //开始调用迁移数据保存服务
         restTemplate.postForObject("http://data-output/newpm/save",tranEntity,JSONObject.class);
         return tranEntity;

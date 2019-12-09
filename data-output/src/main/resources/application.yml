@@ -8,9 +8,9 @@ spring:
   application:
     name: data-output
   datasource:
-    url: jdbc:oracle:thin:@192.168.85.89:1521:SAFE
-    username: scott
-    password: 12345
+    url: jdbc:oracle:thin:@192.168.85.92:1521:pm
+    username: system
+    password: pm123456
     driver-class-name: oracle.jdbc.driver.OracleDriver
     jpa:
       hibernate:

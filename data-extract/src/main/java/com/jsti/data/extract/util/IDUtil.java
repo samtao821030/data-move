@@ -10,7 +10,7 @@ public class IDUtil {
         //MD5化
         String project_code_md5 = MD5Util.MD5(project_code);
         //将MD5化项目编码进一步Hash
-        String project_code_md5_hash = project_code_md5.hashCode()+"";
+        String project_code_md5_hash = (project_code_md5.hashCode()&Integer.MAX_VALUE)+"";
         StringBuffer project_code_buff = new StringBuffer(project_code_md5_hash);
         if(project_code_md5_hash.length()<18){
             int n = 18-project_code_md5_hash.length();
